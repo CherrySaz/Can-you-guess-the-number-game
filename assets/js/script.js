@@ -19,6 +19,6 @@ if isNaN(usersGuess) || usersGuess < 1 || usersGuess > 500 {
 userattempts++;
 
 if (usersGuess === randomNumber) {
-    messagetouser.textcontent
+    messagetouser.textcontent 'Congratulations! You did it! You guessed the number $(randomNumber) in $(attempts)attempts.')
 }
 
