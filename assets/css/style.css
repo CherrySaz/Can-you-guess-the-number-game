@@ -1,3 +1,25 @@
 body {
-    background-color: aquamarine;
+    background-color: rgb(153, 127, 255);
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 100px;
+}
+
+button {
+    background-color: #000000;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+h1 {
+    color: #000000;
+}
+
+input {
+    font-size: 18px;
+    padding: 8px;
 }
