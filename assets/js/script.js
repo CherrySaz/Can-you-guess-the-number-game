@@ -15,7 +15,7 @@ checkanswerButton.addEventListener('click', () => {
     // Check user's guess
     if (isNaN(usersGuess) || usersGuess < 1 || usersGuess > 500) {
         messagetouser.textContent = 'Feeling lucky? Guess a number between 1 and 500';
-        messagetouser.style.color = '#941631';
+        messagetouser.style.color = '#D85266';
         return;
     }
 
@@ -25,7 +25,7 @@ checkanswerButton.addEventListener('click', () => {
     // Compare user's guess with the random number
     if (usersGuess === randomNumber) {
         messagetouser.textContent = `Congratulations! You did it! You guessed the number ${randomNumber} in ${userAttempts} attempts.`;
-        messagetouser.style.color = 'pink';
+        messagetouser.style.color = '#D85266';
         guessInput.disabled = true;
         checkanswerButton.disabled = true;
     } else if (usersGuess < randomNumber) {

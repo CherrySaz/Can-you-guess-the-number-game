@@ -14,7 +14,7 @@ button {
     cursor: pointer;
 
 }
-
+/* font color for header*/
 h1 {
     color: #000000;
 }
@@ -22,4 +22,8 @@ h1 {
 input {
     font-size: 18px;
     padding: 8px;
+}
+/* added image to be lower half of page*/
+.lower-image {
+    margin-top: auto;
 }
