@@ -1,24 +1,39 @@
+// Generate a random number between 1 and 500
 let randomNumber = Math.floor(Math.random() * 500) + 1;
-let attempts = 0;
+let userAttempts = 0;
 
-let guessInput = getElementById('guessInput');
-let checkanswerButton = getElementById('checkanswerButton');
-let messagetouser = getElementById('messagetouser');
+// Get references to HTML elements
+let guessInput = document.getElementById('guessInput');
+let checkanswerButton = document.getElementById('checkanswerButton');
+let messagetouser = document.getElementById('messagetouser');
 
-checkanswerButton.addEventListener('click', ()=> 0 {
+// Add event listener to the "Check Answer" button
+checkanswerButton.addEventListener('click', () => {
+    // Get the user's guessed number
+    let usersGuess = parseInt(guessInput.value);
 
-    let usersGuess = parseInt (guessInput.value);
-})
+    // Check user's guess
+    if (isNaN(usersGuess) || usersGuess < 1 || usersGuess > 500) {
+        messagetouser.textContent = 'Feeling lucky? Guess a number between 1 and 500';
+        messagetouser.style.color = '#941631';
+        return;
+    }
 
-if isNaN(usersGuess) || usersGuess < 1 || usersGuess > 500 {
-    messagetouser = 'Feeling lucky? Guess a number between 1 and 500';
-    messagetouser.style.color.'#941631';
-    return;
-}
+    // Increment user attempts
+    userAttempts++;
 
-userattempts++;
-
-if (usersGuess === randomNumber) {
-    messagetouser.textcontent 'Congratulations! You did it! You guessed the number $(randomNumber) in $(attempts)attempts.')
-}
+    // Compare user's guess with the random number
+    if (usersGuess === randomNumber) {
+        messagetouser.textContent = `Congratulations! You did it! You guessed the number ${randomNumber} in ${userAttempts} attempts.`;
+        messagetouser.style.color = 'pink';
+        guessInput.disabled = true;
+        checkanswerButton.disabled = true;
+    } else if (usersGuess < randomNumber) {
+        messagetouser.textContent = 'Maybe pick a higher number.';
+        messagetouser.style.color = 'violet';
+    } else {
+        messagetouser.textContent = 'Maybe pick a lower number.';
+        messagetouser.style.color = 'blue';
+    }
+});
 
