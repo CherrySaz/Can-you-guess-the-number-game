@@ -30,7 +30,7 @@ checkanswerButton.addEventListener('click', () => {
         checkanswerButton.disabled = true;
     } else if (usersGuess < randomNumber) {
         messagetouser.textContent = 'Maybe pick a higher number.';
-        messagetouser.style.color = 'violet';
+        messagetouser.style.color = 'blue';
     } else {
         messagetouser.textContent = 'Maybe pick a lower number.';
         messagetouser.style.color = 'blue';
